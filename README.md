@@ -61,9 +61,35 @@ Action Card uses Theme only. Changing settings refreshes open Reading-view diagr
 
 ## Install
 
+### From the community catalog
+
 Once listed in the Obsidian community catalog, install **Transitrix Studio** from
 Settings → Community plugins. The public distribution repository is
 [transitrix/transitrix-studio-obsidian](https://github.com/transitrix/transitrix-studio-obsidian).
+
+### Manual install (until the plugin is in the catalog)
+
+Obsidian Desktop only.
+
+1. Open the [latest release](https://github.com/transitrix/transitrix-studio-obsidian/releases/latest)
+   and download the three files listed under **Assets**: `main.js`,
+   `manifest.json` and `styles.css`. Do not use "Source code (zip)" — it does not
+   contain `main.js`.
+2. In your vault, create the folder `.obsidian/plugins/transitrix-studio/`. The
+   folder name must be exactly `transitrix-studio`. `.obsidian` is hidden in most
+   file managers; show hidden files or create the folder from a terminal.
+3. Copy the three downloaded files into that folder.
+4. In Obsidian open Settings → Community plugins, turn **Restricted mode** off,
+   click the refresh icon next to "Installed plugins", and enable
+   **Transitrix Studio**.
+5. Open a note with a `transitrix-*` fence in **Reading view**.
+
+To update, download the three files from the newer release, overwrite the old
+ones and restart Obsidian (or disable and re-enable the plugin).
+
+Optional: the release notes list a SHA-256 for each file. Compare it with the
+file you downloaded (`Get-FileHash main.js` on Windows, `shasum -a 256 main.js`
+on macOS/Linux).
 
 Demo notes with worked fences live in `demo/`.
 
